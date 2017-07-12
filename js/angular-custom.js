@@ -1,6 +1,6 @@
 //use strict
 $postModule = angular.module('postModule', []);
-var base_path = 'http://localhost/kirsha/';
+var base_path = 'http://localhost/billing/';
 $postModule.controller('PostController',function($scope, $http){
 	$scope.post = {};
 	$scope.particular = {};
@@ -11,7 +11,7 @@ $postModule.controller('PostController',function($scope, $http){
 	$scope.editMode = false;
 	$scope.index = '';
 	
-	var url = 'http://localhost/kirsha/ajax.php';
+	var url = 'http://localhost/billing/ajax.php';
 	
 	$scope.saveUser = function(){
 		console.log('run');
