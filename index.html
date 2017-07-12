@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AngularJS Insert Update Delete Using PHP MySQL</title>
+	<!-- Bootstrap -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200' rel='stylesheet' type='text/css'>	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/animate.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- Script -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-custom.js"></script>
+</head>
+<body data-ng-app="postModule" data-ng-controller="PostController" data-ng-init="init()">
+<div class="container">
+	<h2 class="title text-center">AMIT ENTERPRISE</h2>
+
+	<div class="row mt80">
+		<div class="col-lg-12 animated fadeInUp">
+			<div class="table-responsive">
+				<table class="table table-bordered table-hover table-striped">
+					<thead>
+						<tr>
+							<th width="5%">SL NO.</th>
+							<th width="40%">Particulars</th>
+							<th width="10%">QTY.</th>
+							<th width="10%">RATE RS.</th>
+							<th width="10%">RS.</th>
+							<th width="5%">P</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-ng-repeat="invoice in invoice.users | orderBy : '-id'">
+								<th scope="row">{{invoice.id}}</th>
+								<td> {{invoice.text}} </td>
+								<td><input type="text" class="form-control" id="qty" name="qty" placeholder="Qty" data-ng-model='tempUser.qty'></td>
+								<td><input type="text" class="form-control" id="rate" name="rate" placeholder="rate" data-ng-model='tempUser.rate'></td>
+								<td><input type="text" class="form-control" id="rs" name="rs" placeholder="rs" data-ng-model='tempUser.rs'></td>
+								<td><input type="text" class="form-control" id="p" name="p" placeholder="p" data-ng-model='tempUser.p'></td>
+							</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
